@@ -16,6 +16,8 @@ set(COMPILER_SOURCES
     src/irgen/IRGenerator.cpp
     src/cfg/BasicBlock.cpp
     src/cfg/ControlFlowGraph.cpp
+    src/codegen/CodeGenerator.cpp
+    src/optimizer/IROptimizer.cpp
 )
 
 add_executable(test_parser_semantic
@@ -32,3 +34,9 @@ add_executable(test_cfg
     tests/cfg/test_cfg.cpp
     ${COMPILER_SOURCES}
 )
+add_executable(test_codegen
+    tests/codegen/test_codegen.cpp
+    ${COMPILER_SOURCES}
+)
+
+
