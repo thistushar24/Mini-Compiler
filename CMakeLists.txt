@@ -14,6 +14,8 @@ set(COMPILER_SOURCES
     src/semantic/SemanticAnalyzer.cpp
     src/semantic/SymbolTable.cpp
     src/irgen/IRGenerator.cpp
+    src/cfg/BasicBlock.cpp
+    src/cfg/ControlFlowGraph.cpp
 )
 
 add_executable(test_parser_semantic
@@ -23,5 +25,10 @@ add_executable(test_parser_semantic
 
 add_executable(test_ir_generator
     tests/ir/test_ir_generator.cpp
+    ${COMPILER_SOURCES}
+)
+
+add_executable(test_cfg
+    tests/cfg/test_cfg.cpp
     ${COMPILER_SOURCES}
 )
