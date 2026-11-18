@@ -1,0 +1,21 @@
+# Build output
+build/
+
+# CMake generated
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Compiled objects
+*.o
+*.obj
+
+# IDE / OS
+.vscode/
+.idea/
+*.user
+*.suo
+Thumbs.db
+.DS_Store
