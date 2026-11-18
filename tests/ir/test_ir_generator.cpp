@@ -45,5 +45,6 @@ int main() {
     }
 
     std::cout << "IR generation test passed.\n";
+
     return 0;
 }

@@ -7,7 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(src)
 
-# All shared compiler sources (lexer through code generation)
 set(COMPILER_SOURCES
     src/lexer/Lexer.cpp
     src/parser/Parser.cpp
@@ -21,13 +20,6 @@ set(COMPILER_SOURCES
     src/optimizer/IROptimizer.cpp
 )
 
-# ---- Main demo executable (full pipeline) ----
-add_executable(mini_compiler
-    src/main.cpp
-    ${COMPILER_SOURCES}
-)
-
-# ---- Test executables ----
 add_executable(test_parser_semantic
     tests/integration/test_parser_semantic.cpp
     ${COMPILER_SOURCES}
@@ -42,8 +34,9 @@ add_executable(test_cfg
     tests/cfg/test_cfg.cpp
     ${COMPILER_SOURCES}
 )
-
 add_executable(test_codegen
     tests/codegen/test_codegen.cpp
     ${COMPILER_SOURCES}
 )
+
+

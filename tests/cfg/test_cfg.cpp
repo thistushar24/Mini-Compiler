@@ -60,5 +60,6 @@ int main() {
 
     std::cout << "CFG block count: " << blocks.size() << "\n";
     std::cout << "CFG test passed.\n";
+
     return 0;
 }

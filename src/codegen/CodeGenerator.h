@@ -16,5 +16,7 @@ private:
     std::string getRegister(const IROperand& operand);
     std::string allocateRegister(const std::string& name);
 
-    std::string opcodeToAssembly(IROpcode opcode) const;
+    std::string opcodeToAssembly(
+        IROpcode opcode
+    ) const;
 };

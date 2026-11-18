@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BasicBlock.h"
+
 #include "../ir/IRProgram.h"
 
 #include <memory>
@@ -22,7 +23,9 @@ public:
 
 private:
     std::vector<std::unique_ptr<BasicBlock>> blocks;
+
     BasicBlock* entryBlock = nullptr;
+
     std::unordered_map<std::string, BasicBlock*> labelToBlock;
 
     void createBlocks(const IRProgram& program);

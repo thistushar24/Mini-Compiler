@@ -50,5 +50,6 @@ int main() {
     }
 
     std::cout << "Code generation test passed.\n";
+
     return 0;
 }
